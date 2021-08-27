@@ -59,8 +59,8 @@ function RootNavigator() {
           headerTitleAlign: "left",
           headerTitleStyle: {
             color: Colors.light.yellow,
-            fontWeight: "600",
-            fontSize: 18,
+            fontWeight: "500",
+            fontSize: 20,
           },
           headerRight: () => (
             <View
