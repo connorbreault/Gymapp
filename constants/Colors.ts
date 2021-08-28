@@ -7,7 +7,9 @@ export default {
     tabIconSelected: "#4ec7c7",
     yellow: "#F4D35E",
     orange: "#EE964B",
+    lightGrey: "#e8e8e8",
     grey: "#646e78",
+    white: "#fff",
   },
   dark: {
     text: "#fff",
@@ -17,6 +19,8 @@ export default {
     tabIconSelected: "#4ec7c7",
     yellow: "#F4D35E",
     orange: "#EE964B",
+    lightGrey: "#e8e8e8",
     grey: "#646e78",
+    white: "#fff",
   },
 };

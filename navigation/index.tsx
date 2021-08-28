@@ -1,6 +1,12 @@
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { MaterialCommunityIcons, FontAwesome } from "@expo/vector-icons";
 import * as React from "react";
-import { ColorSchemeName, Text, TouchableOpacity, View } from "react-native";
+import {
+  ColorSchemeName,
+  Text,
+  TouchableOpacity,
+  View,
+  Image,
+} from "react-native";
 import {
   NavigationContainer,
   DefaultTheme,
@@ -15,6 +21,7 @@ import { RootStackParamList } from "../types";
 import LinkingConfiguration from "./LinkingConfiguration";
 
 import Colors from "../constants/Colors";
+import ChatRoomScreen from "../screens/ChatRoomScreen";
 
 export default function Navigation({
   colorScheme,
@@ -37,6 +44,32 @@ function RootNavigator() {
   const onSettingsPress = () => {
     console.warn("Settings Pressed");
   };
+  // Reusable funtions
+  const userIconPress = () => {
+    console.log("user icon pressed");
+  };
+
+  // Main tab navbar functions
+  const searchPress = () => {
+    console.log("search pressed");
+  };
+  const mainDotsPress = () => {
+    console.log("main dots pressed");
+  };
+
+  // ChatRoom navbar functions
+  const videoPress = () => {
+    console.log("video pressed");
+  };
+  const userNamePress = () => {
+    console.log("user name pressed");
+  };
+  const callPress = () => {
+    console.log("call pressed");
+  };
+  const chatDotsPress = () => {
+    console.log("chat dots pressed");
+  };
   return (
     <Stack.Navigator
       screenOptions={{
@@ -58,8 +91,8 @@ function RootNavigator() {
           headerTitle: "G y m A p p",
           headerTitleAlign: "left",
           headerTitleStyle: {
-            color: Colors.light.yellow,
-            fontWeight: "500",
+            color: "white",
+            fontWeight: "400",
             fontSize: 20,
           },
           headerRight: () => (
@@ -78,6 +111,87 @@ function RootNavigator() {
             </View>
           ),
         }}
+      />
+      <Stack.Screen
+        name="ChatRoom"
+        component={ChatRoomScreen}
+        options={({ route }) => ({
+          headerBackTitleVisible: false,
+          headerTitleAlign: "left",
+          headerTitleContainerStyle: {
+            left: -15,
+          },
+          title: (
+            <View
+              style={{
+                flexDirection: "row",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              <TouchableOpacity onPress={userIconPress}>
+                {route.params.imageUri ? (
+                  <Image
+                    source={{ uri: route.params.imageUri }}
+                    style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: 40,
+                      overflow: "hidden",
+                      borderWidth: 2,
+                      borderColor: Colors.light.grey,
+                    }}
+                  />
+                ) : (
+                  <View
+                    style={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: 40,
+                      overflow: "hidden",
+                      borderWidth: 2,
+                      borderColor: Colors.light.grey,
+                      backgroundColor: Colors.light.yellow,
+                    }}
+                  >
+                    <FontAwesome size={50} color="white" name="user" />
+                  </View>
+                )}
+              </TouchableOpacity>
+              <View style={{ marginLeft: 10 }}>
+                <TouchableOpacity onPress={userNamePress}>
+                  <Text
+                    style={{
+                      color: Colors.light.yellow,
+                      fontSize: 20,
+                      fontWeight: "bold",
+                    }}
+                  >
+                    {route.params.name}
+                  </Text>
+                  <Text style={{ color: "white", fontSize: 15 }}>
+                    {route.params.name}, You
+                  </Text>
+                </TouchableOpacity>
+              </View>
+            </View>
+          ),
+          headerRight: () => (
+            <View
+              style={{
+                marginRight: 15,
+              }}
+            >
+              <TouchableOpacity onPress={chatDotsPress}>
+                <MaterialCommunityIcons
+                  name="dots-vertical"
+                  color={Colors.light.yellow}
+                  size={22}
+                />
+              </TouchableOpacity>
+            </View>
+          ),
+        })}
       />
       <Stack.Screen
         name="NotFound"
