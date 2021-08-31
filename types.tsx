@@ -20,6 +20,7 @@ export type RootStackParamList = {
   Root: NavigatorScreenParams<MainTabParamList> | undefined;
   ChatRoom: undefined;
   Modal: undefined;
+  Contacts: undefined;
   NotFound: undefined;
 };
 
@@ -41,7 +42,26 @@ export type RootTabScreenProps<Screen extends keyof MainTabParamList> =
 
 export type User = {
   id: String;
-  name: String;
+  firstName: String;
+  lastName: String;
+  imageUri: String;
+  status: String;
+  subscriptions: Subscription;
+};
+export type Gym = {
+  id: String;
+  gymName: String;
+  imageUri: String;
+  users: User;
+};
+export type Subscription = {
+  id: String;
+  user: [User];
+  startDate: String;
+  duration: String;
+  type: Number;
+  gym: Gym;
+  gymName: String;
   imageUri: String;
 };
 

@@ -1,11 +1,8 @@
-import React from "react";
 import { StyleSheet } from "react-native";
-import { withDecay } from "react-native-reanimated";
 import Colors from "../../constants/Colors";
 
 const styles = StyleSheet.create({
   container: {
-    justifyContent: "space-between",
     padding: 10,
   },
   messageBox: {

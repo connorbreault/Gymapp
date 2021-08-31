@@ -33,7 +33,7 @@ const ChatMessage = (props: ChatMessageProps) => {
         ]}
       >
         {!isMyMessage() && (
-          <Text style={styles.userName}>{message.user.name}</Text>
+          <Text style={styles.userName}>{message.user.firstName}</Text>
         )}
         <Text style={styles.content}>{message.content}</Text>
 
