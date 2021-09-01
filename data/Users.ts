@@ -1,6 +1,7 @@
 export default [
   {
     id: "u1",
+    userType: 0,
     firstName: "Connor",
     lastName: "Breault",
     imageUri:
@@ -31,6 +32,7 @@ export default [
   },
   {
     id: "u2",
+    userType: 0,
     firstName: "Lukas",
     lastName: "Lukason",
     imageUri:
@@ -40,6 +42,7 @@ export default [
   },
   {
     id: "u3",
+    userType: 0,
     firstName: "Daniel",
     lastName: "Danielson",
     imageUri: "",
@@ -48,6 +51,7 @@ export default [
   },
   {
     id: "u4",
+    userType: 0,
     firstName: "Alex",
     lastName: "Alexson",
     imageUri:
@@ -57,6 +61,7 @@ export default [
   },
   {
     id: "u5",
+    userType: 0,
     firstName: "Chad",
     lastName: "Chadson",
     imageUri: "",
@@ -65,6 +70,7 @@ export default [
   },
   {
     id: "u6",
+    userType: 0,
     firstName: "Elon",
     lastName: "Musk",
     imageUri:
@@ -74,6 +80,7 @@ export default [
   },
   {
     id: "u7",
+    userType: 0,
     firstName: "Adrian",
     lastName: "Adrianson",
     imageUri:
@@ -82,6 +89,7 @@ export default [
   },
   {
     id: "u8",
+    userType: 0,
     firstName: "Borja",
     imageUri:
       "https://images.pexels.com/photos/2726111/pexels-photo-2726111.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500",
@@ -90,6 +98,7 @@ export default [
   },
   {
     id: "u9",
+    userType: 0,
     firstName: "Mom",
     lastName: "Ur",
     imageUri:
@@ -99,6 +108,7 @@ export default [
   },
   {
     id: "u10",
+    userType: 0,
     firstName: "Angelina",
     lastName: "Angelinason",
     imageUri:

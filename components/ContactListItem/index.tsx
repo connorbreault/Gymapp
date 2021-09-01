@@ -18,11 +18,12 @@ const ContactListItem = (props: ContactListItemProps) => {
   const navigation = useNavigation();
 
   const onPress = () => {
-    navigation.navigate("ChatRoom", {
-      id: chatRoom.id,
-      name: user.name,
-      imageUri: user.imageUri,
-    });
+    // navigation.navigate("ChatRoom", {
+    //   id: chatRoom.id,
+    //   name: user.name,
+    //   imageUri: user.imageUri,
+    // });
+    console.log("chatRoom pressed");
   };
   return (
     <TouchableWithoutFeedback onPress={onPress}>
@@ -36,8 +37,12 @@ const ContactListItem = (props: ContactListItemProps) => {
             </View>
           )}
           <View style={styles.midContainer}>
-            <Text style={styles.userName}>{user.name}</Text>
-            {user.status && <Text style={styles.status}>{user.status}</Text>}
+            <Text style={styles.userName}>
+              {user.firstName} {user.lastName}
+            </Text>
+            {user.status !== "" && (
+              <Text style={styles.status}>{user.status}</Text>
+            )}
           </View>
         </View>
       </View>

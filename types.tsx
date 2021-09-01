@@ -42,6 +42,7 @@ export type RootTabScreenProps<Screen extends keyof MainTabParamList> =
 
 export type User = {
   id: String;
+  userType: Number;
   firstName: String;
   lastName: String;
   imageUri: String;

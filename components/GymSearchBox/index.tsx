@@ -23,7 +23,7 @@ const GymSearchBox = () => {
         />
         <TextInput
           style={styles.textInput}
-          placeholder="Search"
+          placeholder="Search for"
           onChangeText={setMessage}
           value={message}
         />

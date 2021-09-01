@@ -26,8 +26,8 @@ import useColorScheme from "../hooks/useColorScheme";
 import ModalScreen from "../screens/ModalScreen";
 import NotFoundScreen from "../screens/NotFoundScreen";
 import ChatsScreen from "../screens/ChatsScreen";
-import HomeScreen from "../screens/HomeScreen";
-import AccountScreen from "../screens/AccountScreen";
+import TraineeHomeScreen from "../screens/TraineeHomeScreen";
+import TraineeAccountScreen from "../screens/TraineeAccountScreen";
 import {
   RootStackParamList,
   MainTabParamList,
@@ -58,7 +58,7 @@ function MainTabNavigator() {
     >
       <MainTab.Screen
         name="Home"
-        component={HomeScreen}
+        component={TraineeHomeScreen}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="home" color={color} />,
         }}
@@ -74,7 +74,7 @@ function MainTabNavigator() {
       />
       <MainTab.Screen
         name="Account"
-        component={AccountScreen}
+        component={TraineeAccountScreen}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
         }}
